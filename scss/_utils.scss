@@ -1,0 +1,40 @@
+/**********COLORS**********/
+
+$bg:					#ffffff;
+$bg-alt:				#f5f6f7;
+$app-red :#f56a6a;
+$border: rgba(210, 215, 217, 0.75);
+$border-bg:			transparentize(#e6ebed, 0.75);
+$font: #7f888f;
+$font-bold: #3d4449;
+$font-light: #9fa3a6;
+$title-section: #3d4449;
+$gray-search: #eff1f2;
+
+/**********FONTS**********/
+
+$roboto: 'Roboto', sans-serif;
+$slab: 'Roboto Slab', serif;;
+$opens: 'Open Sans', sans-serif;
+
+
+/**********MIXINS**********/
+
+@mixin wrapper($width: 90%, $max-width: none){
+	width: $width;
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**********FUNCTIONS**********/
+
+@function rem($size, $base:16){
+	$remSize: $size / $base;
+	@return #{$remSize}rem;
+}
+
+@function em($size, $base:16){
+	$emSize: $size / $base;
+	@return #{$emSize}em;
+}

@@ -1,0 +1,128 @@
+/**********GENERALS**********/
+
+body{
+  background-color: $bg;
+}
+
+.wrapper{
+  @include wrapper();
+}
+
+/**********HEADER**********/
+
+#header{
+  position: relative;
+  border-bottom: 5px solid $app-red;
+  .logo{
+    display: inline-block;
+    margin-top: 4em;
+    margin-bottom: 1em;
+    font-family: $slab;
+    color: $font;
+    strong{
+      color: #000;
+    }
+  }
+  .nav-social{
+    position: absolute;
+    top: 0;
+    right: 0;
+    li{
+      display: inline-block;
+      a{
+        display: block;
+        padding: 1em .5em;
+        color: $font;
+      }
+    }
+  }
+}
+
+/**********SECTIONS**********/
+
+.text{
+  font-family: $opens;
+  font-size: em(13);
+  line-height: em(22);
+  color: $font;
+  margin-bottom: 2.5em;
+}
+
+
+#banner{
+  //width: 100%;
+  border-bottom: 1px solid $border;
+  .image-container{
+    height: em(320);
+    width: 100%;
+    border-radius: .4em;
+    background-image: url("../img/pic01.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 2em 0 2.5em 0;
+  }
+  .description-container{
+    h1{
+      font-size: 1.7em;
+      font-family: $slab;
+    }
+    span{
+      display: block;
+      font-size: .8em;
+      text-transform: uppercase;
+      margin: .7em 0 1.7em 0;
+      font-family: $slab;
+      color: $font;
+      letter-spacing: 1px;
+    }
+
+    .btn{
+      display: inline-block;
+      color: $app-red;
+      border: 2px solid $app-red;
+      border-radius: 5px;
+      padding: .9em 1.5em;
+      font-family: $slab;
+      font-size: .9em;
+      margin-bottom: 3em ;
+    }
+  }
+}
+
+#features{
+  .section-title{
+    display: inline-block;
+    font-family: $slab;
+    font-size: 1.2em;
+    margin: 2em 0 2em 0;
+    padding: 0 .7em .5em 0;
+    border-bottom: 3px solid $app-red;
+  }
+  .feature{
+    .container-icon{
+      margin:0.6em;
+      display: inline-block;
+      border: 2px solid $border;
+      border-radius: 3px; 
+      transform: rotate(45deg);
+      text-align: center;
+      span{
+        display: block;
+        font-size: 1.2em;
+        padding: 0.8em;
+        color: $app-red;
+        transform: rotate(-45deg);
+      }
+    }
+    
+    .feature-description{
+      .feature-title{
+        font-family: $slab;
+        font-size: 1.02em;
+        margin: 1em 0;
+      }
+
+    }
+  }
+}
