@@ -19,6 +19,9 @@ body{
     margin-bottom: 1em;
     font-family: $slab;
     color: $font;
+    &:hover{
+      color:$app-red;
+    }
     strong{
       color: #000;
     }
@@ -33,6 +36,9 @@ body{
         display: block;
         padding: 1em .5em;
         color: $font;
+        &:hover{
+          color:$app-red;
+        }
       }
     }
   }
@@ -43,15 +49,44 @@ body{
 .text{
   font-family: $opens;
   font-size: em(13);
-  line-height: em(22);
+  line-height: em(25);
   color: $font;
   margin-bottom: 2.5em;
 }
 
+.btn{
+  display: inline-block;
+  color: $app-red;
+  border: 2px solid $app-red;
+  border-radius: 5px;
+  padding: .9em 1.6em;
+  font-family: $slab;
+  font-size: .9em;
+  margin-bottom: 3em;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover{
+    background-color:$hover-btn;
+  }
+}
+
+.section-title{
+  display: inline-block;
+  font-family: $slab;
+  font-size: 1.2em;
+  margin: 2em 0 2em 0;
+  padding: 0 .7em .5em 0;
+  border-bottom: 3px solid $app-red;
+}
+
+.title{
+  font-family: $slab;
+  font-size: 1.02em;
+  margin: 1em 0;
+}
 
 #banner{
-  //width: 100%;
-  border-bottom: 1px solid $border;
+  border-bottom: 2px solid $border;
   .image-container{
     height: em(320);
     width: 100%;
@@ -62,43 +97,25 @@ body{
     background-repeat: no-repeat;
     margin: 2em 0 2.5em 0;
   }
-  .description-container{
+  .description-banner{
     h1{
-      font-size: 1.7em;
+      font-size: 1.6em;
       font-family: $slab;
     }
     span{
       display: block;
-      font-size: .8em;
+      font-size: .75em;
       text-transform: uppercase;
       margin: .7em 0 1.7em 0;
       font-family: $slab;
       color: $font;
       letter-spacing: 1px;
     }
-
-    .btn{
-      display: inline-block;
-      color: $app-red;
-      border: 2px solid $app-red;
-      border-radius: 5px;
-      padding: .9em 1.5em;
-      font-family: $slab;
-      font-size: .9em;
-      margin-bottom: 3em ;
-    }
   }
 }
 
 #features{
-  .section-title{
-    display: inline-block;
-    font-family: $slab;
-    font-size: 1.2em;
-    margin: 2em 0 2em 0;
-    padding: 0 .7em .5em 0;
-    border-bottom: 3px solid $app-red;
-  }
+  border-bottom: 2px solid $border;
   .feature{
     .container-icon{
       margin:0.6em;
@@ -115,14 +132,23 @@ body{
         transform: rotate(-45deg);
       }
     }
-    
-    .feature-description{
-      .feature-title{
-        font-family: $slab;
-        font-size: 1.02em;
-        margin: 1em 0;
-      }
+  }
+}
 
+#portfolio{
+  article{
+    &:not(:last-of-type){
+      border-bottom: 2px solid $border;
     }
+    &:not(:first-of-type){
+      margin-top: rem(33);
+    }
+    img{
+      border-radius: rem(5);
+    }
+  }
+
+  .btn{
+    font-size: em(11);
   }
 }
