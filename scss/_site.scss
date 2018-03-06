@@ -86,6 +86,11 @@ body{
   margin-bottom: 1em;
 }
 
+img{
+  width: 100%;
+  border-radius: rem(5);
+}
+
 #banner{
   border-bottom: 2px solid $border;
   .image-container{
@@ -145,12 +150,132 @@ body{
     &:not(:first-of-type){
       margin-top: rem(33);
     }
-    img{
+    /*img{
+      width: 100%;
       border-radius: rem(5);
-    }
+    }*/
   }
   .btn{
     font-size: em(11);
+  }
+}
+
+#sidebar{
+  width: rem(300);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color:$bg-sidebar;
+  box-shadow:0 0 5em 0 rgba(0, 0, 0, 0.175);
+  overflow-y: scroll;
+  >:not(:first-child){
+    margin-right: rem(20);
+    margin-left: rem(20);
+  }
+  >:nth-child(n+3){
+    border-top: 2px solid $border;
+  }
+  .search{
+    background-color: $search;
+    padding: rem(20);
+    form{
+      overflow: hidden;
+      border-radius: .3rem;
+      display: flex;
+      input{
+        border: none;
+        padding: .5rem;
+      }
+      span{
+        border: none;
+        padding: 0.5rem;
+        background-color: #fff;
+        color:$font;
+      }
+    }
+  }
+  .menu{
+    li{
+      &:not(:first-child){
+        border-top: 1px solid $border;
+      }
+      &:last-child{
+        margin-bottom: 2em;
+      }
+      a{
+        font-family: $slab;
+        text-transform: uppercase;
+        display: block;
+        font-size: 0.8em;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        &:hover{
+          color:$app-red;
+        } 
+      }
+    }
+  }
+  .mini-posts{
+    article:not(:last-child){
+      border-bottom: 1px solid $border;
+      margin-bottom: 1.5em;
+    }
+    .text{
+      margin-top: 1.5em;
+    }
+    .btn{
+      font-size: 0.7em;
+    }
+  }
+  .contact{
+    ul{
+      margin-bottom: 2em;
+    }
+    li{
+      color:$app-red;  
+      padding: 1rem 0;
+    }
+    li:not(:last-of-type){
+      border-bottom: 1px solid $border;
+    }
+    li:nth-of-type(1)::before{
+      content: "\f003";
+      font-family: icomoon;
+      margin-right: 1rem;
+    }
+    li:nth-of-type(2)::before{
+      content: "\f095";
+      font-family: icomoon;
+      margin-right: 1rem;
+    }
+    li:nth-of-type(3)::before{
+      content: "\f015";
+      font-family: icomoon;
+      margin-right: 1rem;
+    }
+  }
+
+  #footer{
+    .copyright{
+      margin: 3em 0;
+      a:hover{
+        color:$app-red;
+      }
+    }
+  }
+  .toggle{
+    height: 2.5rem;
+    width: 3.5rem;
+    position: fixed;
+    z-index: 1;
+    top: 0.5rem;
+    left: 18rem;
+    background-color: $border;
+    border-radius: .3rem;
+    text-align: center;
+    line-height: 2.5rem;
+    color:$font;
   }
 }
 
@@ -185,12 +310,15 @@ body{
   #portfolio{
     .container-flex{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-wrap: wrap;
       article{
-        width: 50%;
+        flex-basis: 50%;
         margin-top: 0;
         padding-top: em(33);
+        &:nth-child(-n+2){
+          padding-top: 0;
+        }
         &:nth-child(odd){
           border-right: 2px solid $border;
           padding-right: 5%;
@@ -239,6 +367,12 @@ body{
   .wrapper{
     @include wrapper(85%);
   }
+  #header{
+    .nav-social{
+      top: 3em;
+    }
+  }
+  
   #banner{
     .description-banner{
       h1{
@@ -275,25 +409,28 @@ body{
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      
       article{
-flex-basis: 30%;
+        flex-basis: 30%;
         margin-top: 0;
         padding-top: em(33);
+        
         &:nth-child(odd){
-          border-right: 2px solid $border;
-          padding-right: 5%;
+          border-right: none;
+          padding-right: 0;
         }
         &:nth-child(even){
-          padding-left: 5%;
+          padding-left: 0;
         }
-        &:nth-child(-n+2){
+        &:nth-child(-n+3){
           padding-top: 0;
+          border: none;
         }       
-        &:nth-child(5){
+        &:nth-child(4){
           border-bottom: none;
         }
-        img{
-          width: 100%;
+        &:nth-child(1){
+          border-bottom: none;
         }
       }
     }
