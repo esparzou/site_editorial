@@ -2,6 +2,7 @@
 
 body{
   background-color: $bg;
+
 }
 
 .wrapper{
@@ -169,6 +170,11 @@ img{
   background-color:$bg-sidebar;
   box-shadow:0 0 5em 0 rgba(0, 0, 0, 0.175);
   overflow-y: scroll;
+  left: rem(-350);
+  transition: left .5s ease;
+  &.show{
+    left:0;
+  }
   >:not(:first-child){
     margin-right: rem(20);
     margin-left: rem(20);
@@ -264,18 +270,24 @@ img{
       }
     }
   }
-  .toggle{
+  #menu-handler{
     height: 2.5rem;
     width: 3.5rem;
     position: fixed;
     z-index: 1;
-    top: 0.5rem;
-    left: 18rem;
+    top: 0.7rem;
+    left: 0;
     background-color: $border;
     border-radius: .3rem;
     text-align: center;
     line-height: 2.5rem;
     color:$font;
+    cursor: pointer;
+    transition: left .5s ease;
+    border-top: none;
+    &.show{
+      left: 18.2rem;
+    }
   }
 }
 
@@ -383,7 +395,17 @@ img{
       }      
     } 
   }
+  #sidebar{
+    #menu-handler{
+      left: -1rem;
+      background-color:transparent;
+      color:$app-red;
+      font-size: 1.7rem;
+    }
+  }
+  
 }
+
 
 @media screen and (min-width: em(980)){
   #features{
