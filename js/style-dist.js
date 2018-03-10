@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#menu-handler").click(function(){$(this).toggleClass("show"),$("#sidebar").toggleClass("show")})});
+$(document).ready(function(){$("#menu-handler").click(function(){$(this).toggleClass("move-icon-menu"),$("#sidebar").toggleClass("show")})});
