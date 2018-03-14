@@ -10,8 +10,8 @@
 </head>
 <body>
 <!-- page -->
-  <div class="page flex-container">
-    <div class="flex-item">
+  <div class="page">
+    <div class="flex-item-main">
     <!-- header -->
       <header id="header">
         <a href="index.html" class="logo"><strong>Editorial </strong>by HTML5 UP</a>
@@ -128,75 +128,92 @@
       </section>
       <!--<span id="menu-handler" class="icon-bars"></span>-->
     </div>
-
-    <!-- <div class="flex-item">    
-
-      <div id="sidebar">
-
+    <div class="flex-item-sidebar">
+    <!-- sidebar -->
+      <div id="sidebar">    
+      <!-- search -->
         <section class="search">
-          <form action="">
+          <form action="post">
             <input type="search" name="" id="" placeholder="Search">
             <span class="icon-search"></span>
           </form>
         </section>
-
+      <!-- navigation -->
         <nav class="menu">
           <h2 class="section-title">Menu</h2>
           <ul>
-            <li><a href="">homepage</a></li>
-            <li><a href="">generic</a></li>
-            <li><a href="">elements</a></li>
-            <li><a href="">submenu</a></li>
-            <li><a href="">etiam dolore</a></li>
-            <li><a href="">adipiscing</a></li>
-            <li><a href="">another submenu</a></li>
-            <li><a href="">maximus erat</a></li>
-            <li><a href="">sapien mauris</a></li>
-            <li><a href="">amet lacinia</a></li>
+            <li><a href="#">homepage</a></li>
+            <li><a href="#">generic</a></li>
+            <li><a href="#">elements</a></li>
+            <li class="sub-menu-parent">
+              <a href="#" class="open-sub-menu">submenu</a>
+              <ul class="sub-menu">
+                <li><a href="#">lorem dolor</a></li>
+                <li><a href="#">Ipsum Adipiscing</a></li>
+                <li><a href="#">Tempus Magna</a></li>
+                <li><a href="#">Feugiat Veroeros</a></li>
+              </ul>
+            </li>
+            <li><a href="#">etiam dolore</a></li>
+            <li><a href="#">adipiscing</a></li>
+            <li class="sub-menu-parent">
+              <a href="#" class="open-sub-menu">another submenu</a>
+              <ul class="sub-menu">
+                  <li><a href="#">lorem dolor</a></li>
+                  <li><a href="#">Ipsum Adipiscing</a></li>
+                  <li><a href="#">Tempus Magna</a></li>
+                  <li><a href="#">Feugiat Veroeros</a></li>
+                </ul>
+            </li>
+            <li><a href="#">maximus erat</a></li>
+            <li><a href="#">sapien mauris</a></li>
+            <li><a href="#">amet lacinia</a></li>
           </ul>
         </nav>
-
+      <!-- mini-posts -->
         <section class="mini-posts">
             <h2 class="section-title">Ante interdum</h2>
           <article>
-            <a href="">
-              <img src="../img/pic09.jpg" alt="">
-              <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-            </a>
+            <a href="" class="image-container">
+              <img src="../img/pic07.jpg" alt="">
+            </a>  
+            <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
           </article>
           <article>
-            <a href="">
-              <img src="../img/pic10.jpg" alt="">
-              <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-            </a>
-          </article>
-          <article>
-            <a href="">
+            <a href="" class="image-container">
               <img src="../img/pic08.jpg" alt="">
-              <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
             </a>
+            <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>            
+          </article>
+          <article>
+            <a href="" class="image-container">
+              <img src="../img/pic09.jpg" alt="">
+            </a>
+            <p class="text">Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
             <div class="btn">MORE</div>
           </article>
         </section>
-
+      <!-- contact -->
         <section class="contact">
           <h2 class="section-title">Get in touch</h2>
           <p class="text">Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, 
             ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
           <ul>
-            <li><a href="" class="text">information@untitled.tld</a></li>
-            <li><a href="" class="text">(000) 000-0000</a></li>
-            <li><a href="" class="text">1234 Somewhere Road #8254
-                Nashville, TN 00000-0000</a></li>
+            <li class="icon-envelope-o"><a href="#">information@untitled.tld</a></li>
+            <li class="icon-phone"><span>(000) 000-0000</span></li>
+            <li class="icon-home"><span>1234 Somewhere Road #8254 <br>
+                Nashville, TN 00000-0000</span></li>
           </ul>    
         </section>
-
+      <!-- footer -->
         <footer id="footer">
-          <p class="copyright text">© Untitled. All rights reserved. Demo Images: <a href="#">Unsplash</a>. Design: <a href="">HTML5 UP</a>.</p>
+          <p class="copyright-text">© Untitled. All rights reserved. Demo Images: <a href="#">Unsplash</a>. Design: <a href="">HTML5 UP</a>.</p>
         </footer>
-        
       </div>
-    </div>-->
+      <!-- menu handler -->
+      <span id="menu-handler" class="icon-bars"></span>
+    </div>
+    
   </div>
 
 <!-- scripts -->

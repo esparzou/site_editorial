@@ -5,7 +5,6 @@ body {
   color:$font;
   font-family: $opens;
   line-height: 1.3;
-  font-size: .9rem;
 }
 
 img {
@@ -16,65 +15,64 @@ img {
 }
 
 section {
-  padding-top: em(40);
-  padding-bottom: em(14);
+  padding-top: rem(40);
+  padding-bottom: rem(14);
 }
 
 .section-title {
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-family: $slab;
   color: $font-bold;
   display: inline-block;
-  padding-right: em(15);
-  padding-bottom: em(10);
-  margin-bottom: em(40);
+  padding-right: rem(15);
+  padding-bottom: rem(10);
+  margin-bottom: rem(40);
   border-bottom: 3px solid $red;
 }
 
 .title {
   color: $font-bold;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   font-family: $slab;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 .text {
-  margin-bottom: 2em;
-  font-size: .9em;
-  line-height: em(25);
+  margin-bottom: 2rem;
+  font-size: .8rem;
+  line-height: rem(20);
 }
 
 .btn {
   display: inline-block;
-  height: 4em;
-  font-size: 0.8em;
+  height: 3rem;
+  font-size: .8rem;
   font-family: $slab;
   font-weight: 700;
   color: $red;
   border: 2px solid $red;
-  border-radius: .35em;
-  padding: 0 em(32);
+  border-radius: .2rem;
+  padding: 0 rem(25);
   margin-bottom: em(26.5);
+  letter-spacing: .05rem;
   cursor: pointer;
   &:hover {
     background-color: $hover-btn;
   }
 }
+
 /**********HEADER**********/
 #header {
   @include wrapper();
-  height: 7em;
-  padding-bottom: 0.7em;
+  height: 8rem;
+  padding-bottom: 1rem;
   border-bottom: 5px solid $red;
   display: flex;
   justify-content: space-between;
-  font-size: 1.2em;
+  font-size: 1rem;
   .logo {
     align-self: flex-end;
     font-family: $slab;
-    padding: 0.4em;
-    position: relative;
-    left: -.4em;
     &:hover {
       color: $red;
     }
@@ -84,15 +82,15 @@ section {
   }
 }
 .nav-social {
+  margin-top: 1rem;
   align-self: flex-start;
+  flex-shrink: 1;
   li{
     display: inline-block;
-    a{
+    a {
       display: block;
-      padding: .4em;
-      margin-top: 1em;
+      padding: .4rem;  
       position: relative;
-      left: .4em;
       &:hover{
         color: $red;
       }
@@ -101,26 +99,26 @@ section {
 }
 
 /**********BANNER**********/
-#banner{
+#banner {
   @include wrapper();
 }
 .image-container{
-  margin-bottom: em(40);
+  margin-bottom: rem(45);
 }
 .banner-text-container {
   h1{
     color: $font-bold;
-    font-size: 1.9em;
+    font-size: 1.7rem;
     font-family: $slab;
-    margin-bottom: .1em;
+    margin-bottom: .6rem;
   }
   span {
     display: inline-block;
     font-family: $slab;
     text-transform: uppercase;
-    font-size: .9em;
-    letter-spacing: .09em;
-    margin-bottom: 1.7em;
+    font-size: .8rem;
+    letter-spacing: .08rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -131,24 +129,24 @@ section {
 
 }
 .feature {
-  margin-bottom: em(40);
+  margin-bottom: rem(40);
   span {
     color: $red;
-    font-size: 1.5em;
+    font-size: 1.3rem;
     position: relative;
     display: inline-block;
-    height: 3.7em;
-    width: 3.7em;
+    height: 5rem;
+    width: 5rem;
     text-align: center;
-    line-height: 3.7em;
-    margin-bottom: em(20);
+    line-height: 5rem;
+    margin-bottom: rem(20);
     &::after{
       content: '';
       display: inline-block;
-      height: 2.8em;
-      width: 2.8em;
+      height: 3.5rem;
+      width: 3.5rem;
       border: solid 2px $border;
-      border-radius: .2em;
+      border-radius: .2rem;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -166,39 +164,252 @@ section {
   border-top: 2px solid $border;
   padding-bottom: 0;
   .post {
-    margin-bottom: em(60);
+    margin-bottom: rem(60);
     &:not(:last-child)::after{
       content: '';
       display: block;
       width: 100%;
-      height: em(1);
+      height: rem(1);
       background-color: $border;
       position: relative;
-      bottom: em(-30);
+      bottom: rem(-30);
+    }
+    &:last-child {
+      margin-bottom: rem(30);
     }
   }
   .image-container {
     display: block;
-    margin-bottom: em(26);
+    margin-bottom: rem(26);
   }
   .btn {
-    font-size: .7em;
+    font-size: .7rem;
     margin-bottom: 0;
+    height: 2.3rem;
+    font-size: .6rem;
+    padding: 0 rem(20);
+    letter-spacing: .05rem;
+    cursor: pointer;
   } 
 }
+/**********SIDEBAR**********/
+
+#sidebar {
+  font-size: .8rem;
+  height: 100%;
+  width: 18rem;
+  position: fixed;
+  left: -24rem;
+  z-index: 1;
+  top: 0;
+  background-color: $bg-sidebar;
+  box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.175);
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: left .4s ease;
+  >:not(:first-child) {
+    border-bottom: 2px solid $border;
+    padding-bottom: rem(40);
+  }
+  &.show-sidebar {
+    left: 0;
+  }
+  .section-title {
+    font-size: 1.1rem;
+  }
+}
+   
+.search {
+  background-color: $search;
+  margin-bottom: rem(40);
+  padding: rem(22) 0;
+  form {
+    border: 1px solid $border;
+    border-radius: .35rem;
+    @include wrapper();
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #fff;
+    input {
+      flex-grow: 1;
+      padding-left: 1rem;
+      height: 2.5rem;
+      border: none;
+      outline: 0 none;
+      color: $font-light;
+    } 
+    span {
+      font-size: 1.2rem;
+      display: inline-block;
+      padding: .5rem;
+      color: $border;
+      transform:rotate(90deg);
+    }
+  }
+}
+
+.menu {
+  @include wrapper();
+  font-family: $slab;
+  li {
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    color: $font-bold;
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    padding: .8rem 0;
+    color: $font-bold;
+    transition: color .3s ease;
+    font-size: .7rem;
+    letter-spacing: .07rem;
+    &:hover {
+      color: $red;
+    }   
+  }
+  .open-sub-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: '>';
+      //margin-top: .2rem;
+      font-size: 1rem;
+      transform:rotate(90deg);
+    }
+    
+  }
+  .sub-menu {
+    display: none;
+    @include wrapper();
+    margin-bottom: .7rem;
+    li {
+      border-bottom: none;
+      a {
+        font-size: .6rem;
+        color: $font-light;
+        transition: color .3s ease;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.mini-posts {
+  @include wrapper();
+  article:not(:first-of-type) {
+    border-top: 1px solid $border;
+    padding-top: 2rem;
+  }    
+  .text {
+    font-size: .9rem;
+    margin-top: 2rem;
+    
+  }
+  .btn {
+    font-size: .6rem;
+    height: 2.1rem;
+    padding: .5rem 1.2rem;
+  }
+}
+.contact {
+  @include wrapper();
+  a,
+  span {
+    display: inline-block;
+    font-family: $opens;
+    vertical-align: middle;
+  }
+  a {
+    padding-bottom: .2rem;
+    border-bottom: .5px dotted $border;
+    &:hover {
+      color: $red;
+      border-color: $red;
+    }
+  }
+  li::before {
+    font-size: 1.2rem;
+    display: inline-block;
+    color: $red;
+    margin-right: .8rem;
+    vertical-align: middle;
+  }
+  li:not(:first-child){
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid $border;
+    line-height: 1.2; 
+  }
+}
+
+#footer {
+  @include wrapper();
+  .copyright-text {
+    display: block;
+    font-size: .7rem;
+    padding-top: 2rem;
+    a {
+      border-bottom: .5px dotted $border;
+      &:hover {
+        color: $red;
+        border-color: $red;
+      } 
+    }
+         
+  } 
+}
+#menu-handler {
+  position: fixed;
+  display: block;
+  height: 2.8rem;
+  width: 3.6rem;
+  text-align: center;
+  line-height: 2.8rem;
+  top: .6rem;
+  left: .6rem;
+  font-size: 1.2rem;
+  background-color: $border;
+  border-radius: .25rem;
+  z-index: 1;
+  cursor: pointer;
+  transition: left .4s ease;
+  &.move-menu-handler {
+    left: 18.5rem;
+  }
+}
+
 
 /**********MEDIA QUERIES**********/
 
 @media screen and (min-width: em(480)) {
   .feature {
-    margin-bottom: em(40);
+    margin-bottom: rem(40);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     span {
       flex: 0 0 auto;
-      font-size: 2em;
-      margin-right: em(17);
+      font-size: 2rem;
+      margin-right: rem(20);
+      height: 7rem;
+      width: 7rem;
+      line-height: 7rem;
+      &::after{
+        height: 5rem;
+        width: 5rem;
+      }
     }
     .text-container {
       flex: 1 1 auto;
@@ -240,12 +451,33 @@ section {
   #portfolio {
     @include wrapper(87%);
   }
+  .text {
+    font-size: .9rem;
+  }
   .nav-social{
     align-self: flex-end;
-  }  
+  }
+  .banner-text-container {
+    h1 {
+      font-size: 2.8rem;
+    }
+  } 
+  #menu-handler {
+    color: $red;
+    font-size: 1.5rem;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    left: 1rem;
+    &.move-menu-handler {
+      left: 19rem;
+    }
+  }
 }
 
-@media screen and (min-width: em(808)) {
+
+
+@media screen and (min-width: em(858)) {
   #banner {
     .flex-container {
       display: flex;
@@ -253,22 +485,25 @@ section {
       justify-content: space-between;
       .image-container {
         flex-basis: 53%;
-        //flex-grow: 0;
-        //flex-shrink: 0;
-        margin-bottom: em(26.5);
+        margin-bottom: rem(21.2);
       }
-      .banner-text-container{
+      .banner-text-container {
         flex-basis: 42%;
-        //flex-grow: 1;
-        //flex-shrink: 1;
         h1{
-          font-size: 3.2em;
-          margin-bottom: .5em;
+          font-size: 3rem;
+          margin-bottom: .5rem;
+        }
+        span {
+          display: inline-block;
+          font-family: $slab;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          letter-spacing: .08rem;
+          margin-bottom: 1.5rem;
         }
       }
     }
   }
-  
 }
 @media screen and (min-width: em(980)) {
   #features {
@@ -278,8 +513,195 @@ section {
       justify-content: space-between;
       .feature {
         flex-basis: 45%;
+        span {
+          flex: 0 0 auto;
+          font-size: 2.5rem;
+          margin-right: rem(20);
+          height: 9rem;
+          width: 9rem;
+          line-height: 9rem;
+          &::after {
+            height: 6.2rem;
+            width: 6.2rem;
+          }
+        }
       }
+    }
+  } 
+}
+@media screen and (min-width: em(1280)) {
+  #sidebar {
+    width: 18rem;
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    transition: width .4s ease;
+    &.show-sidebar {
+      width: 0;
+    }
+    .section-title {
+      font-size: 1.1rem;
     }
   }
   
+  #menu-handler {
+    position: absolute;
+    color: $red;
+    font-size: 1.5rem;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    left: 19rem;
+    &.move-menu-handler {
+      left: 1rem;
+    }
+  }
+  .page {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: em(1680)) {
+  .text {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: rem(30);
+  }
+
+  #header,
+  #banner,
+  #features,
+  #portfolio {
+    @include wrapper(85%);
+  }
+  
+  #header {
+    font-size: 1.2rem;
+  }
+
+  #sidebar {
+    width: 25rem;
+    .section-title {
+      font-size: 1.4rem;
+    }
+  }
+  .search {
+    margin-bottom: rem(50);
+    padding: rem(35) 0;
+    form {
+      @include wrapper(85%);
+      font-size: 1.1rem;
+      input {
+        height: 2.8rem;
+      } 
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }  
+  .menu {
+    @include wrapper(85%);
+    a {      
+      font-size: .9rem;    
+    }
+    .open-sub-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::after {
+        content: '>';
+        //margin-top: .2rem;
+        font-size: 1rem;
+        transform:rotate(90deg);
+      }      
+    }
+    .sub-menu {
+      @include wrapper(85%);
+      li {
+        a {
+          font-size: .8rem;  
+        }
+      }
+    }
+  } 
+  .mini-posts {
+    @include wrapper(85%);   
+    .btn {
+      font-size: .6rem;
+      height: 2.1rem;
+      padding: .5rem 1.2rem;
+    }
+  }
+  .contact {
+    @include wrapper(85%);
+    a,
+    span {
+      font-size: .9rem;
+    }
+    a {
+      padding-bottom: .2rem;
+      border-bottom: .5px dotted $border;
+    }
+    li::before {
+      font-size: 1.4rem;
+    }
+    
+  }
+  
+  #footer {
+    @include wrapper(85%);
+    .copyright-text {
+      font-size: .9rem;        
+    } 
+  }
+  #menu-handler {
+    font-size: 2rem;
+    left: 26rem;
+  } 
+
+  #banner {
+    .flex-container {
+      .banner-text-container {
+        flex-basis: 42%;
+        h1{
+          font-size: 5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  } 
+  #portfolio {
+    .flex-container {
+      &::after {
+        content: '';
+        display: block;
+        height: calc(100% - 54px);
+        width: em(1);
+        background-color: $border;
+        position: absolute;
+        right: 32.5%;
+      }
+      &::before {
+        content: '';
+        display: block;
+        height: calc(100% - 54px);
+        width: em(1);
+        background-color: $border;
+        position: absolute;
+        left: 32.5%;
+      }  
+      .post {
+        flex-basis: 30%;
+        &::after{
+          width: calc(100% + 200px);
+        }
+        &:nth-child(4)::after {
+          content: none;
+        }
+      }
+    }    
+  } 
 }
