@@ -532,6 +532,7 @@ section {
 @media screen and (min-width: em(1280)) {
   #sidebar {
     width: 18rem;
+    
     position: relative;
     left: 0;
     top: 0;
@@ -561,6 +562,10 @@ section {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
+    max-height: 900px;
+  }
+  .flex-item-main {
+    
   }
 }
 
